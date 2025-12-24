@@ -1,6 +1,5 @@
 import {Swiper as SwiperJuri} from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import '../../styles/vendor/swiper.css';
 
 const initSwiper = () => {
   document.addEventListener('DOMContentLoaded', () => {

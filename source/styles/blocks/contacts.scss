@@ -50,6 +50,25 @@
 .contacts__info--email {
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    color: #1c3374;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    color: #1c3374;
+    border: 1px solid #1c3374;
+  }
+
+  &:active {
+    opacity: 1;
+    border-bottom: 1px solid #1c3374;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 @media (width >= 768px) {
