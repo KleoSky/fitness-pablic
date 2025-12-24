@@ -1,0 +1,13 @@
+.second-title {
+  font-family: var(--font-second, inherit);
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (width >= 768px) {
+  .second-title {
+    font-size: 54px;
+  }
+}

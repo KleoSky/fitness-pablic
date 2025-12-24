@@ -1,13 +1,18 @@
 :root {
-  --font-base: "Manrope", "Helvetica", sans-serif;
-  --color-base: #484848;
+  --font-base: "Roboto Condensed", "Arial", sans-serif;
+  --font-second: "Alumni Sans", "Arial", sans-serif;
+  --color-base: #102654;
   --color-second: #ffffff;
-  --color-extra-light: #f0efe9;
-  --bg-base: #f0efe9;
-  --bg-second: #ffffff;
-  --bg-accent: #316dc2;
-  --bg-button-active: #275699;
-  --bg-button-dis: #a9afb7;
-  --overlay-photo: rgba(49, 109, 194, 0.2);
-  --overlay-page: rgba(13, 29, 51, 0.4);
+  --color-opacity: rgba(16, 38, 84, 0.5);
+  --color-price: #103aae;
+  --color-features: #2e35ac;
+  --price-shadow: rgba(232, 232, 232, 0.48);
+  --base-grad: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+  --bg-base: #ffffff;
+  --bg-second: #f8f9fc;
+  --bg-third: #1c3374;
+  --bg-form: #102654;
+  --bg-accent: #ed0233;
+  --bg-dark: #030a1a;
+  --active-border: #d10a42;
 }

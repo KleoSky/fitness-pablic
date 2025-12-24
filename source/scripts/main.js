@@ -1,27 +1,21 @@
-import { menuOpen, subMenuOpen } from './modules/header';
-menuOpen();
-subMenuOpen();
+import { switchTab } from './modules/price';
+switchTab();
 
-import { initSwiperHero } from './modules/hero';
-initSwiperHero();
+import { scroll } from './modules/hero';
+scroll();
+
+import { initSwiper } from './modules/juri';
+initSwiper();
+
+import { switchFaqTab, initAccordions } from './modules/faq';
+switchFaqTab();
+initAccordions();
 
 import { initFormValidation } from './modules/form-validate';
 initFormValidation();
 
-import { modalOpen } from './modules/modal';
-modalOpen();
+import { initVideo } from './modules/video';
+initVideo();
 
-import { initSelectArrow } from './modules/select';
-initSelectArrow();
-
-import { initSwiperPrograms } from './modules/programs';
-initSwiperPrograms();
-
-import { initSwiperNews } from './modules/news';
-initSwiperNews();
-
-import { initAccordion } from './modules/faq';
-initAccordion();
-
-import { initSwiperRewiews } from './modules/reviews';
-initSwiperRewiews();
+import { initSwiperReviews } from './modules/reviews';
+initSwiperReviews();

@@ -1,0 +1,86 @@
+.nav__list {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 20px;
+}
+
+.nav__item {
+  line-height: 1;
+  box-sizing: border-box;
+
+  &:has(a:not(.nav__link-disabled)):hover {
+    border-bottom: 1px solid var(--bg-base, #ffffff);
+    margin-bottom: -1px;
+  }
+
+  &:has(a:not(.nav__link-disabled)):focus,
+  &:has(a:not(.nav__link-disabled)):focus-visible {
+    border: 1px solid var(--bg-base, #ffffff);
+    margin-bottom: -1px;
+  }
+}
+
+.nav__link {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.43;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-second, #ffffff);
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+// Добавить класс nav__link-disabled для отключения доступности
+.nav__link-disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.nav__link-disabled:focus {
+  outline: none;
+}
+
+@media (width >= 768px) {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 39px;
+  }
+
+  .nav__list {
+    column-gap: 30px;
+    margin: 0;
+  }
+
+  .nav__item {
+    padding-top: 1px;
+  }
+
+  .nav__item:first-child {
+    margin-left: 1px;
+  }
+
+  .nav__link {
+    line-height: 1.57;
+  }
+}
+
+@media (width >= 1366px) {
+  .nav {
+    column-gap: 167px;
+  }
+
+  .nav__list {
+    column-gap: 82px;
+  }
+}

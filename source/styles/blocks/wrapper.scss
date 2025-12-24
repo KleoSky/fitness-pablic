@@ -1,0 +1,17 @@
+.wrapper {
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (width >= 768px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media (width >= 1366px) {
+  .wrapper {
+    width: 1366px;
+  }
+}

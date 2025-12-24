@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html class="html" lang="ru" data-validate="html">
+<html lang="ru" data-validate="html">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Стражировка - программа для обучения по обмену за границей">
-  <title>Internship - твоя возможность для старта карьеры зарубежом</title>
-  <link rel="preload" href="fonts/manrope/manrope-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/manrope/manrope-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/manrope/manrope-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/swiper.css">
+  <title>SUPERGYM</title>
+  <link rel="preload" href="fonts/roboto/roboto-condensed-light.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto/roboto-condensed-regular.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto/roboto-condensed-bold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/alumni/alumni-sans-semi-bold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/alumni/alumni-sans-extra-bold.woff2" type="font/woff2" as="font"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.scss">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" sizes="32x32" href="favicons/32.png" type="image/png">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -19,1023 +24,795 @@
 </head>
 
 <body class="body">
-  <div class="body-wrapper">
+  <div class="body__wrapper container">
     <header class="body__header header" data-test="hero">
-      <div class="header__main">
-        <div class="header__logo-wrapper">
-          <svg width="30" height="30">
-            <use href="icons/stack.svg#logo"></use>
-          </svg>
+      <div class="header__wrapper">
+        <div class="header__main">
+          <img class="header__logo" src="images/logo.svg" width="100" height="20" alt="Логотип сайта SUPERGYM">
+          <a class="header__link" href="tel:8-800-555-55-55">8 800 555-55-55</a>
         </div>
-        <nav class="header__nav nav">
-          <button class="nav__button nav__button--closed" type="button">Меню</button>
-          <ul class="nav__list nav__list--opened">
-            <li class="nav__item">
-              <a class="nav__link" href="#">О проекте</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--select" href="#">Программы</a>
-              <ul class="nav__sublist nav__sublist--closed">
-                <li class="nav__subitem">
-                  <a class="nav__sublink" href="#">Стажировки</a>
-                </li>
-                <li class="nav__subitem">
-                  <a class="nav__sublink" href="#">Волонтёрство</a>
-                </li>
-                <li class="nav__subitem">
-                  <a class="nav__sublink" href="#">Учёба</a>
-                </li>
-                <li class="nav__subitem">
-                  <a class="nav__sublink" href="#">Религия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Как поехать</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Отзывы</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--select" href="#">Новости</a>
-              <ul class="nav__sublist nav__sublist--closed">
-                <li class="nav__subitem">
-                  <a class="nav__sublink" href="#">Интервью</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Контакты</a>
-            </li>
+        <section class="header__hero hero">
+          <h1 class="hero__title">Фитнес центр</h1>
+          <p class="hero__location">Омск</p>
+          <ul class="hero__description-list">
+            <li class="hero__description-item">Тренажёрный зал</li>
+            <li class="hero__description-item">Групповые&nbsp;занятия</li>
+            <li class="hero__description-item">Кардио-зона</li>
           </ul>
-        </nav>
+          <button class="hero__button" type="button">Купить абонемент</button>
+          <div class="hero__picture">
+            <picture>
+              <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
+                srcset="images/hero-img-desktop@1x.webp 1x, images/hero-img-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="324" height="390" type="image/webp"
+                srcset="images/hero-img-tablet@1x.webp 1x, images/hero-img-tablet@2x.webp 2x">
+              <source media="(min-width: 1336px)" width="500" height="524" type="image/jpeg"
+                srcset="images/hero-img-desktop@1x.jpg 1x, images/hero-img-desktop@2x.jpg 2x">
+              <img src="images/hero-img-tablet@1x.jpg" srcset="images/hero-img-tablet@2x.jpg 2x" width="324" height="390"
+                alt="Тренер фитнесс-зала">
+            </picture>
+          </div>
+        </section>
       </div>
-      <section class="header__hero hero">
-        <h1 class="visually-hidden">Проект "Стажировка" - твоя возможность начать карьеру в успешной компании!</h1>
-        <div class="hero__swiper swiper">
-          <ul class="hero__list swiper-wrapper">
-            <li class="hero__item hero__item--active hero-card swiper-slide">
-              <div class="hero-card__picture">
-                <picture>
-                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
-                    srcset="images/hero-img-desktop-1@1x.webp 1x, images/hero-img-desktop-1@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
-                    srcset="images/hero-img-tablet-1@1x.webp 1x, images/hero-img-tablet-1@2x.webp 2x">
-                  <source width="320" height="568" type="image/webp"
-                    srcset="images/hero-img-mobile-1@1x.webp 1x, images/hero-img-mobile-1@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
-                    srcset="images/hero-img-desktop-1@1x.jpg 1x, images/hero-img-desktop-1@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
-                    srcset="images/hero-img-tablet-1@1x.jpg 1x, images/hero-img-tablet-1@2x.jpg 2x">
-                  <img src="images/hero-img-mobile-1@1x.jpg" srcset="images/hero-img-mobile-1@2x.jpg 2x" width="320"
-                    height="568" alt="Кудрявая студентка в очках">
-                </picture>
-              </div>
-              <div class="hero-card__content">
-                <h2 class="hero-card__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-                <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая
-                  настоящий студенческий стиль жизни!</p>
-                <div class="hero-card__button-wrapper">
-                  <button class="hero-card__button main-button" type="button">Подробнее</button>
-                </div>
-              </div>
+    </header>
+    <main class="body__main main">
+      <section class="main__about about" data-test="about">
+        <div class="about__wrapper wrapper">
+          <div class="about__info">
+            <h2 class="about__title main-title">Тренажёрный зал</h2>
+            <h3 class="about__description">Просторный зал площадью 900 кв/м</h3>
+            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+              Тренажёрный
+              зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+            <span>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре
+              есть несколько оборудованных залов для различных видов групповых занятий.</span>
+          </div>
+          <div class="about__picture">
+            <picture>
+              <source media="(min-width: 1366px)" width="660" height="400" type="image/webp"
+                srcset="images/main-img-desktop@1x.webp 1x, images/main-img-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="678" height="345" type="image/webp"
+                srcset="images/main-img-tablet@1x.webp 1x, images/main-img-tablet@2x.webp 2x">
+              <source width="320" height="280" type="image/webp"
+                srcset="images/main-img-mobile@1x.webp 1x, images/main-img-mobile@2x.webp 2x">
+              <source media="(min-width: 1336px)" width="660" height="400" type="image/jpeg"
+                srcset="images/main-img-desktop@1x.jpg 1x, images/main-img-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="678" height="345" type="image/jpeg"
+                srcset="images/main-img-tablet@1x.jpg 1x, images/main-img-tablet@2x.jpg 2x">
+              <img src="images/main-img-mobile@1x.jpg" srcset="images/main-img-mobile@2x.jpg 2x" width="320" height="280"
+                alt="Просторный тренажёрный зал">
+            </picture>
+          </div>
+          <div class="about__video-wrapper">
+            <div class="about__video">
+              <picture>
+                <source media="(min-width: 1366px)" width="360" height="320" type="image/webp"
+                  srcset="images/video-preview-desktop@1x.webp 1x, images/video-preview-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="270" height="170" type="image/webp"
+                  srcset="images/video-preview-tablet@1x.webp 1x, images/video-preview-tablet@2x.webp 2x">
+                <source width="320" height="170" type="image/webp"
+                  srcset="images/video-preview-mobile@1x.webp 1x, images/video-preview-mobile@2x.webp 2x">
+                <source media="(min-width: 1336px)" width="360" height="320" type="image/jpeg"
+                  srcset="images/video-preview-desktop@1x.jpg 1x, images/video-preview-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="270" height="170" type="image/jpeg"
+                  srcset="images/video-preview-tablet@1x.jpg 1x, images/video-preview-tablet@2x.jpg 2x">
+                <img src="images/video-preview-mobile@1x.jpg" srcset="images/video-preview-mobile@2x.jpg 2x" width="320"
+                  height="170" alt="Просторный тренажёрный зал">
+              </picture>
+              <button class="about__play-button" type="button">
+                <span class="visually-hidden">Запустить просмотр видео</span>
+              </button>
+            </div>
+            <div class="about__iframe-container"></div>
+          </div>
+        </div>
+      </section>
+      <section class="main__price price" data-test="price">
+        <h2 class="price__title main-title">Абонементы</h2>
+        <div class="price__filter">
+          <ul class="price__tab-list">
+            <li class="price__tab-item price__tab-item--current" rel="tab1">
+              <button class="price__button price__button--current" type="button" rel="tab1">1 месяц</button>
             </li>
-            <li class="hero__item hero-card swiper-slide">
-              <div class="hero-card__picture">
-                <picture>
-                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
-                    srcset="images/hero-img-desktop-2@1x.webp 1x, images/hero-img-desktop-2@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
-                    srcset="images/hero-img-tablet-2@1x.webp 1x, images/hero-img-tablet-2@2x.webp 2x">
-                  <source width="320" height="568" type="image/webp"
-                    srcset="images/hero-img-mobile-2@1x.webp 1x, images/hero-img-mobile-2@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
-                    srcset="images/hero-img-desktop-2@1x.jpg 1x, images/hero-img-desktop-2@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
-                    srcset="images/hero-img-tablet-2@1x.jpg 1x, images/hero-img-tablet-2@2x.jpg 2x">
-                  <img src="images/hero-img-mobile-2@1x.jpg" srcset="images/hero-img-mobile-2@2x.jpg 2x" width="320"
-                    height="568" alt="Гуппа волонтёров разной национальности">
-                </picture>
-              </div>
-              <div class="hero-card__content">
-                <h2 class="hero-card__title">Волонтёрские программы — внесите свой вклад в общество</h2>
-                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
-                </p>
-                <div class="hero-card__button-wrapper">
-                  <button class="hero-card__button main-button" type="button">Подробнее</button>
-                </div>
-              </div>
+            <li class="price__tab-item" rel="tab2">
+              <button class="price__button" type="button" rel="tab2">6 месяцев</button>
             </li>
-            <li class="hero__item hero-card swiper-slide">
-              <div class="hero-card__picture">
-                <picture>
-                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
-                    srcset="images/hero-img-desktop-3@1x.webp 1x, images/hero-img-desktop-3@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="768" height="1024" type="image/webp"
-                    srcset="images/hero-img-tablet-3@1x.webp 1x, images/hero-img-tablet-3@2x.webp 2x">
-                  <source width="320" height="568" type="image/webp"
-                    srcset="images/hero-img-mobile-3@1x.webp 1x, images/hero-img-mobile-3@2x.webp 2x">
-                  <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpeg"
-                    srcset="images/hero-img-desktop-3@1x.jpg 1x, images/hero-img-desktop-3@2x.jpg 2x">
-                  <source media="(min-width: 768px)" width="768" height="1024" type="image/jpeg"
-                    srcset="images/hero-img-tablet-3@1x.jpg 1x, images/hero-img-tablet-3@2x.jpg 2x">
-                  <img src="images/hero-img-mobile-3@1x.jpg" srcset="images/hero-img-mobile-3@2x.jpg 2x" width="320"
-                    height="568" alt="Мжчина и две женщины обсуждают проект за офисным столом">
-                </picture>
-              </div>
-              <div class="hero-card__content">
-                <h2 class="hero-card__title">Программы стажировок в крупнейших компаниях мира</h2>
-                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-                <div class="hero-card__button-wrapper">
-                  <button class="hero-card__button main-button" type="button">Подробнее</button>
-                </div>
-              </div>
+            <li class="price__tab-item" rel="tab3">
+              <button class="price__button" type="button" rel="tab3">12 месяцев</button>
+            </li>
+          </ul>
+          <ul class="price__info">
+            <li class="price__info-item price__info-item--active" rel="tab1">
+              <ul class="price__cards-list">
+                <li class="price__card card">
+                  <h3 class="card__title">С тренером</h3>
+                  <p class="card__description">12 занятий</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">5000</p>
+                    <span class="card__price-transparent" aria-hidden="true">5000</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+                <li class="price__card card">
+                  <h3 class="card__title">Дневной</h3>
+                  <p class="card__description">с 8:00 до 17:00</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">1700</p>
+                    <span class="card__price-transparent" aria-hidden="true">1700</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+                <li class="price__card card">
+                  <h3 class="card__title">Полный день</h3>
+                  <p class="card__description">с 8:00 до 22:00</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">2700</p>
+                    <span class="card__price-transparent" aria-hidden="true">2700</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+              </ul>
+            </li>
+            <li class="price__info-item price__info-item--hidden" rel="tab2">
+              <ul class="price__cards-list">
+                <li class="price__card card">
+                  <h3 class="card__title">С тренером</h3>
+                  <p class="card__description">12 занятий</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">30000</p>
+                    <span class="card__price-transparent" aria-hidden="true">30000</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+                <li class="price__card card">
+                  <h3 class="card__title">Дневной</h3>
+                  <p class="card__description">с 8:00 до 17:00</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">10200</p>
+                    <span class="card__price-transparent" aria-hidden="true">10200</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+                <li class="price__card card">
+                  <h3 class="card__title">Полный день</h3>
+                  <p class="card__description">с 8:00 до 22:00</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">16200</p>
+                    <span class="card__price-transparent" aria-hidden="true">16200</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+              </ul>
+            </li>
+            <li class="price__info-item price__info-item--hidden" rel="tab3">
+              <ul class="price__cards-list">
+                <li class="price__card card">
+                  <h3 class="card__title">С тренером</h3>
+                  <p class="card__description">12 занятий</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">60000</p>
+                    <span class="card__price-transparent" aria-hidden="true">60000</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+                <li class="price__card card">
+                  <h3 class="card__title">Дневной</h3>
+                  <p class="card__description">с 8:00 до 17:00</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">20400</p>
+                    <span class="card__price-transparent" aria-hidden="true">20400</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+                <li class="price__card card">
+                  <h3 class="card__title">Полный день</h3>
+                  <p class="card__description">с 8:00 до 22:00</p>
+                  <div class="card__price-wrapper">
+                    <p class="card__price">32400</p>
+                    <span class="card__price-transparent" aria-hidden="true">32400</span>
+                  </div>
+                  <button class="card__button" type="button">Купить абонемент</button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
-        <div class="hero__bullets swiper-pagination">
-          <button class="hero__bullet hero__bullet--active" type="button">
-            <span class="visually-hidden">Показать первую программу</span>
+      </section>
+      <section class="main__games games" data-test="games">
+        <div class="games__wrapper">
+          <h2 class="games__title">Super Games</h2>
+          <div class="games__datetime">
+            <div class="games__date">
+              <span class="games__date-text">Дата</span>
+              <p class="games__date-number">7</p>
+              <span class="games__date-month">Марта</span>
+              <span class="games__date-year">2019</span>
+            </div>
+            <div class="games__time">
+              <span class="games__time-text">Время</span>
+              <p class="games__time-number">12:00</p>
+            </div>
+          </div>
+          <p class="games__description">Ежегодные соревнования по CrossFit</p>
+          <button class="games__button" type="button">Заполнить заявку</button>
+          <div class="games__picture">
+            <picture>
+              <source media="(min-width: 1366px)" width="660" height="500" type="image/webp"
+                srcset="images/games-img-desktop@1x.webp 1x, images/games-img-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="378" height="348" type="image/webp"
+                srcset="images/games-img-tablet@1x.webp 1x, images/games-img-tablet@2x.webp 2x">
+              <source width="290" height="290" type="image/webp"
+                srcset="images/games-img-mobile@1x.webp 1x, images/games-img-mobile@2x.webp 2x">
+              <source media="(min-width: 1336px)" width="660" height="500" type="image/jpeg"
+                srcset="images/games-img-desktop@1x.jpg 1x, images/games-img-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="378" height="348" type="image/jpeg"
+                srcset="images/games-img-tablet@1x.jpg 1x, images/games-img-tablet@2x.jpg 2x">
+              <img src="images/games-img-mobile@1x.jpg" srcset="images/games-img-mobile@2x.jpg 2x" width="290" height="290"
+                alt="Мужчина во время тренировки">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="main__juri juri" data-test="juri">
+        <h2 class="juri__title second-title">Жюри</h2>
+        <div class="juri__wrapper">
+          <button class="juri__button juri__button--prev" type="button">
+            <span class="visually-hidden">Показать предыдущего члена жюри</span>
           </button>
-          <button class="hero__bullet" type="button">
-            <span class="visually-hidden">Показать вторую программу</span>
-          </button>
-          <button class="hero__bullet" type="button">
-            <span class="visually-hidden">Показать третью программу</span>
+          <div class="juri__swiper swiper">
+            <ul class="juri__list swiper-wrapper">
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Анна Павлова</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-1@1x.webp 1x, images/juri-1@2x.webp 2x">
+                    <img src="images/juri-1@1x.jpg" srcset="images/juri-1@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Анна Павлова</h4>
+                  <h5 class="member__direction">BodyFlex</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 3 Trainer</li>
+                    <li class="member__feature">Проводит марафоны<br>красоты</li>
+                    <li class="member__feature">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Алексей Лавров</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-2@1x.webp 1x, images/juri-2@2x.webp 2x">
+                    <img src="images/juri-2@1x.jpg" srcset="images/juri-2@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Алексей Лавров</h4>
+                  <h5 class="member__direction">X-Functional</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 4 Trainer</li>
+                    <li class="member__feature">Победитель турнира<br>"Кубок 800"</li>
+                    <li class="member__feature">Опыт — 7 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Александр Пашков</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-3@1x.webp 1x, images/juri-3@2x.webp 2x">
+                    <img src="images/juri-3@1x.jpg" srcset="images/juri-3@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Александр Пашков</h4>
+                  <h5 class="member__direction">CrossFit</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 3 Trainer</li>
+                    <li class="member__feature">Победитель чемпионата<br>России по CrossFit</li>
+                    <li class="member__feature">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Мария Кетова</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-4@1x.webp 1x, images/juri-4@2x.webp 2x">
+                    <img src="images/juri-4@1x.jpg" srcset="images/juri-4@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Мария Кетова</h4>
+                  <h5 class="member__direction">Stretching</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 3 Trainer</li>
+                    <li class="member__feature">Знание анатомии и<br>физиологии человека</li>
+                    <li class="member__feature">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Анна Павлова</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-1@1x.webp 1x, images/juri-1@2x.webp 2x">
+                    <img src="images/juri-1@1x.jpg" srcset="images/juri-1@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Анна Павлова</h4>
+                  <h5 class="member__direction">BodyFlex</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 3 Trainer</li>
+                    <li class="member__feature">Проводит марафоны<br>красоты</li>
+                    <li class="member__feature">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Алексей Лавров</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-2@1x.webp 1x, images/juri-2@2x.webp 2x">
+                    <img src="images/juri-2@1x.jpg" srcset="images/juri-2@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Алексей Лавров</h4>
+                  <h5 class="member__direction">X-Functional</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 4 Trainer</li>
+                    <li class="member__feature">Победитель турнира<br>"Кубок 800"</li>
+                    <li class="member__feature">Опыт — 7 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Александр Пашков</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-3@1x.webp 1x, images/juri-3@2x.webp 2x">
+                    <img src="images/juri-3@1x.jpg" srcset="images/juri-3@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Александр Пашков</h4>
+                  <h5 class="member__direction">CrossFit</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 3 Trainer</li>
+                    <li class="member__feature">Победитель чемпионата<br>России по CrossFit</li>
+                    <li class="member__feature">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="juri__item member swiper-slide" tabindex="0">
+                <h3 class="member__title">Мария Кетова</h3>
+                <div class="member__pictute">
+                  <picture>
+                    <source width="260" height="300" type="image/webp"
+                      srcset="images/juri-4@1x.webp 1x, images/juri-4@2x.webp 2x">
+                    <img src="images/juri-4@1x.jpg" srcset="images/juri-4@2x.jpg 2x" width="260" height="300" alt="Член жюри">
+                  </picture>
+                </div>
+                <div class="member__info">
+                  <h4 class="member__name">Мария Кетова</h4>
+                  <h5 class="member__direction">Stretching</h5>
+                  <ul class="member__features">
+                    <li class="member__feature">Certified Level 3 Trainer</li>
+                    <li class="member__feature">Знание анатомии и<br>физиологии человека</li>
+                    <li class="member__feature">Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="juri__button juri__button--next" type="button">
+            <span class="visually-hidden">Показать следующего члена жюри</span>
           </button>
         </div>
       </section>
-    </header>
-    <main class="body__main main">
-      <section class="main__about about" data-test="about" id="about">
-        <h2 class="about__title">О проекте «Стажировка»</h2>
-        <div class="about__head">
-          <p>«Стажировка» — совместный проект
-            правительств и волонтёрских бригад.</p>
-        </div>
-        <div class="about__description">
-          <h3>Наша цель</h3>
-          <p>Наша деятельность направлена
-            на повышение квалификации молодых
-            специалистов на ранних и средних
-            стадиях карьеры, предоставляя
-            им инструменты для решения сложных
-            проблем, с которыми сталкиваются в мире.
-            Цель центра — наделить этих людей
-            способностью инициировать значимые
-            изменения.</p>
-        </div>
-        <button class="about__button main-button" type="button">Подробнее о проекте</button>
-        <ul class="about__list">
-          <li class="about__item">
-            <h4>Более 250 программ</h4>
-            <p>учебных и рабочих, разной
-              длительностью от 3 месяцев
-              до 1 года</p>
+      <section class="main__features features" data-test="features">
+        <h2 class="features__title main-title">Наши преимущества</h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <h3>Площадь</h3>
+            <span>900</span>
+            <i>кв/м</i>
+            <p>Занимайтесь без очередей и толкучки</p>
           </li>
-          <li class="about__item">
-            <h4>Более 3000 участников</h4>
-            <p>уже успешно прошли программу от «Стажировка»
-              и остались в разных странах</p>
+          <li class="features__item">
+            <h3>Собственная парковка</h3>
+            <span>70</span>
+            <i>Машин</i>
+            <p>Вы всегда найдёте место для своей машины на нашей парковке</p>
           </li>
-          <li class="about__item">
-            <h4>Участники из 60 стран</h4>
-            <p>студенты со всего мира приезжают на программу
-              «Стажировки» от 3 месяцев до 1 года</p>
+          <li class="features__item">
+            <h3>Тренажёров</h3>
+            <span>100</span>
+            <p>Современные тренажёры на все группы мышц</p>
           </li>
-          <li class="about__item">
-            <h4>от 4 200 $<br>
-              до 8 400 $</h4>
-            <p>грант всем участникам
-              для комфортного прохождения
-              программы</p>
+          <li class="features__item">
+            <h3>Комфорт</h3>
+            <span>350</span>
+            <i>Мест</i>
+            <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+          </li>
+          <li class="features__item">
+            <h3>Тренерский опыт</h3>
+            <span>5+</span>
+            <i>Лет</i>
+            <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
           </li>
         </ul>
       </section>
-      <section class="main__programs programs" data-test="programs" id="programs">
-        <div class="programs__wrapper">
-          <h2 class="programs__title">Программы</h2>
-          <div class="programs__buttons-wrapper">
-            <button class="programs__button programs__button--prev" type="button">
-              <span class="visually-hidden">Показать предыдущую программу</span>
-            </button>
-            <button class="programs__button programs__button--next" type="button">
-              <span class="visually-hidden">Показать следующую программу</span>
-            </button>
-          </div>
-          <div class="programs__swiper swiper" data-id="programs-swiper">
-            <ul class="programs__list swiper-wrapper">
-              <li class="programs__item programs__item--active program-card swiper-slide">
-                <div class="program-card__picture">
-                  <picture>
-                    <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
-                      srcset="images/programs-img-desktop-1@1x.webp 1x, images/programs-img-desktop-1@2x.webp 2x">
-                    <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
-                      srcset="images/programs-img-tablet-1@1x.webp 1x, images/programs-img-tablet-1@2x.webp 2x">
-                    <source width="290" height="400" type="image/webp"
-                      srcset="images/programs-img-mobile-1@1x.webp 1x, images/programs-img-mobile-1@2x.webp 2x">
-                    <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg"
-                      srcset="images/programs-img-desktop-1@1x.jpg 1x, images/programs-img-desktop-1@2x.jpg 2x">
-                    <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg"
-                      srcset="images/programs-img-tablet-1@1x.jpg 1x, images/programs-img-tablet-1@2x.jpg 2x">
-                    <img src="images/programs-img-mobile-1@1x.jpg" srcset="images/programs-img-mobile-1@2x.jpg 2x" width="290"
-                      height="400" alt="Две девушки за просмотром планшетки с обучающей программой">
-                  </picture>
-                </div>
-                <div class="program-card__content">
-                  <h3 class="program-card__title">Стажировки</h3>
-                  <p>Получите незаменимый опыт
-                    работы в крупнейших мировых
-                    компаниях.</p>
-                  <button class="program-card__button card-button" type="button">
-                    <span class="visually-hidden">Подробнее о программе</span>
-                  </button>
-                </div>
-              </li>
-              <li class="programs__item programs__item--active program-card swiper-slide">
-                <div class="program-card__picture">
-                  <picture>
-                    <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
-                      srcset="images/programs-img-desktop-2@1x.webp 1x, images/programs-img-desktop-2@2x.webp 2x">
-                    <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
-                      srcset="images/programs-img-tablet-2@1x.webp 1x, images/programs-img-tablet-2@2x.webp 2x">
-                    <source width="290" height="400" type="image/webp"
-                      srcset="images/programs-img-mobile-2@1x.webp 1x, images/programs-img-mobile-2@2x.webp 2x">
-                    <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg"
-                      srcset="images/programs-img-desktop-2@1x.jpg 1x, images/programs-img-desktop-2@2x.jpg 2x">
-                    <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg"
-                      srcset="images/programs-img-tablet-2@1x.jpg 1x, images/programs-img-tablet-2@2x.jpg 2x">
-                    <img src="images/programs-img-mobile-2@1x.jpg" srcset="images/programs-img-mobile-2@2x.jpg 2x" width="290"
-                      height="400" alt="Смуглый парень в футболке с надписью Волонтёр">
-                  </picture>
-                </div>
-                <div class="program-card__content">
-                  <h3 class="program-card__title">Волонтёрство</h3>
-                  <p>Помогайте другим
-                    и развивайте свои
-                    лидерские качества</p>
-                  <button class="program-card__button card-button" type="button">
-                    <span class="visually-hidden">Подробнее о программе</span>
-                  </button>
-                </div>
-              </li>
-              <li class="programs__item programs__item--active program-card swiper-slide">
-                <div class="program-card__picture">
-                  <picture>
-                    <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
-                      srcset="images/programs-img-desktop-3@1x.webp 1x, images/programs-img-desktop-3@2x.webp 2x">
-                    <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
-                      srcset="images/programs-img-tablet-3@1x.webp 1x, images/programs-img-tablet-3@2x.webp 2x">
-                    <source width="290" height="400" type="image/webp"
-                      srcset="images/programs-img-mobile-3@1x.webp 1x, images/programs-img-mobile-3@2x.webp 2x">
-                    <source media="(min-width: 1440px)" width="392" height="420" type="image/jpeg"
-                      srcset="images/programs-img-desktop-3@1x.jpg 1x, images/programs-img-desktop-3@2x.jpg 2x">
-                    <source media="(min-width: 768px)" width="324" height="420" type="image/jpeg"
-                      srcset="images/programs-img-tablet-3@1x.jpg 1x, images/programs-img-tablet-3@2x.jpg 2x">
-                    <img src="images/programs-img-mobile-3@1x.jpg" srcset="images/programs-img-mobile-3@2x.jpg 2x" width="290"
-                      height="400" alt="Студент в очках учится за столом, обложившись книгами">
-                  </picture>
-                </div>
-                <div class="program-card__content">
-                  <h3 class="program-card__title">Учёба</h3>
-                  <p>Получите образование и измените
-                    своё будущее.</p>
-                  <button class="program-card__button card-button" type="button">
-                    <span class="visually-hidden">Подробнее о программе</span>
-                  </button>
-                </div>
-              </li>
-            </ul>
-            <div class="programs__scrollbar swiper-scrollbar">
-              <span class="visually-hidden">Скроллбар для переключения слайдов с доступными программами</span>
+      <section class="main__offers offers" data-test="offers">
+        <div class="offers__wrapper">
+          <h2 class="offers__title main-title">Акции</h2>
+          <div class="offers__main">
+            <div class="offers__price">
+              <h3>Год</h3>
+              <span>4999</span>
+              <p>Безлимитный абонемент в тренажёрный зал</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="offers__pictire">
+              <picture>
+                <source media="(min-width: 1366px)" width="280" height="460" type="image/webp"
+                  srcset="images/girl-img-desktop@1x.webp 1x, images/girl-img-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="400" height="462" type="image/webp"
+                  srcset="images/girl-img-tablet@1x.webp 1x, images/girl-img-tablet@2x.webp 2x">
+                <source width="320" height="360" type="image/webp"
+                  srcset="images/girl-img-mobile@1x.webp 1x, images/girl-img-mobile@2x.webp 2x">
+                <source media="(min-width: 1336px)" width="280" height="460" type="image/jpeg"
+                  srcset="images/girl-img-desktop@1x.jpg 1x, images/girl-img-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg"
+                  srcset="images/girl-img-tablet@1x.jpg 1x, images/girl-img-tablet@2x.jpg 2x">
+                <img src="images/girl-img-mobile@1x.jpg" srcset="images/girl-img-mobile@2x.jpg 2x" width="320" height="360"
+                  alt="Красивая девушка в спортивной одежде">
+              </picture>
             </div>
           </div>
-          <a class="programs__link main-button" href="#">Все программы</a>
-        </div>
-      </section>
-      <section class="main__grant grant" data-test="grant" id="grant">
-        <div class="grant__wrapper">
-          <h2 class="grant__title">Как поехать</h2>
-          <p>Свяжитесь с координатором, чтобы узнать полную информацию.
-            Вы получите актуальные сведения о доступных программах
-            и городах, в которых можете пройти программу.</p>
-          <div class="grant__picture">
-            <picture>
-              <source media="(min-width: 1440px)" width="498" height="363" type="image/webp"
-                srcset="images/grant-img-desktop@1x.webp 1x, images/grant-img-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="678" height="375" type="image/webp"
-                srcset="images/grant-img-tablet@1x.webp 1x, images/grant-img-tablet@2x.webp 2x">
-              <source width="290" height="200" type="image/webp"
-                srcset="images/grant-img-mobile@1x.webp 1x, images/grant-img-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" width="498" height="363" type="image/jpeg"
-                srcset="images/grant-img-desktop@1x.jpg 1x, images/grant-img-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" width="678" height="375" type="image/jpeg"
-                srcset="images/grant-img-tablet@1x.jpg 1x, images/grant-img-tablet@2x.jpg 2x">
-              <img src="images/grant-img-mobile@1x.jpg" srcset="images/grant-img-mobile@2x.jpg 2x" width="290" height="200"
-                alt="Столб с указателями в виде цветных стрелок с названиями стран">
-            </picture>
-          </div>
-          <div class="grant__content">
-            <h3 class="grant__content-title">Чтобы получить грант
-              на обучение, вам нужно:</h3>
-            <ul class="grant__content-list">
-              <li class="grant__content-item">Быть в возрасте от 16 до 30 лет</li>
-              <li class="grant__content-item">Иметь оконченное среднее образование</li>
-              <li class="grant__content-item">Иметь документально подтверждённое отсутствие
-                судимости и пройти консульскую проверку</li>
-              <li class="grant__content-item">За последние 2 года быть не больше 3х месяцев
-                подряд непрерывно в одной стране</li>
-            </ul>
+          <div class="offers__stock-wrapper">
+            <div class="offers__stock">
+              <h3>Месяц бесплатно</h3>
+              <p>Приведи друга, получи абонемент в подарок</p>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="offers__stock">
+              <h3>Скидка 20%</h3>
+              <p>Корпоративный фитнес с командой</p>
+              <a href="#">Подробнее</a>
+            </div>
           </div>
         </div>
       </section>
-      <section class="main__news news" data-test="news" id="news">
-        <div class="news__wrapper-main">
-          <h2 class="news__title">Новости и материалы</h2>
-          <ul class="news__tab-list">
-            <li class="news__tab-item news__tab-item--current" rel="tab-1">
-              <button class="news__tab-button news__tab-button--current" type="button" rel="tab-1">Общее</button>
-            </li>
-            <li class="news__tab-item" rel="tab-2">
-              <button class="news__tab-button" type="button" rel="tab-2">Волонтёрство</button>
-            </li>
-            <li class="news__tab-item" rel="tab-3">
-              <button class="news__tab-button" type="button" rel="tab-3">Стажировки</button>
-            </li>
-            <li class="news__tab-item" rel="tab-4">
-              <button class="news__tab-button" type="button" rel="tab-4">Карьера</button>
-            </li>
-            <li class="news__tab-item" rel="tab-5">
-              <button class="news__tab-button" type="button" rel="tab-5">Путешествия</button>
-            </li>
-          </ul>
-          <div class="news__wrapper-second swiper">
-            <ul class="news__list swiper-wrapper" rel="tab-1">
-              <li class="news__item news__item--active swiper-slide" rel="tab-2">
-                <div class="news__item-wrapper news__item-wrapper--big">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-1@1x.webp 1x, images/news-img-desktop-1@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-1@1x.webp 1x, images/news-img-tablet-1@2x.webp 2x">
-                        <source width="290" height="330" type="image/webp"
-                          srcset="images/news-img-mobile-1@1x.webp 1x, images/news-img-mobile-1@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-1@1x.jpg 1x, images/news-img-desktop-1@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-1@1x.jpg 1x, images/news-img-tablet-1@2x.jpg 2x">
-                        <img src="images/news-img-mobile-1@1x.jpg" srcset="images/news-img-mobile-1@2x.jpg 2x" width="290"
-                          height="330" alt="Студентка даёт интервью">
-                      </picture>
-                    </div>
-                    <div class="news__picture-big">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-1@1x.webp 1x, images/news-img-big-1@2x.webp 2x">
-                        <source width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-1@1x.webp 1x, images/news-img-big-1@2x.webp 2x">
-                        <img src="images/news-img-big-1@1x.jpg" srcset="images/news-img-big-1@2x.jpg 2x" width="604"
-                          height="400" alt="Студентка даёт интервью">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content news__content--big">
-                    <h3 class="news__content-title">Интервью с участницей программы
-                      стажировки</h3>
-                    <time class="news__content-date" datetime="2023-03-23">23/03/2023</time>
-                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-2@1x.webp 1x, images/news-img-desktop-2@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-2@1x.webp 1x, images/news-img-tablet-2@2x.webp 2x">
-                        <source width="290" height="240" type="image/webp"
-                          srcset="images/news-img-mobile-2@1x.webp 1x, images/news-img-mobile-2@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-2@1x.jpg 1x, images/news-img-desktop-2@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-2@1x.jpg 1x, images/news-img-tablet-2@2x.jpg 2x">
-                        <img src="images/news-img-mobile-2@1x.jpg" srcset="images/news-img-mobile-2@2x.jpg 2x" width="290"
-                          height="240" alt="Побережье Тель-Авива. Израиль">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Путешествуем по миру</h3>
-                    <time class="news__content-date" datetime="2023-03-20">20/03/2023</time>
-                    <p>Какие места посещают наши
-                      студенты весной</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
+      <section class="main__faq faq" data-test="faq">
+        <div class="faq__wrapper wrapper">
+          <h2 class="faq__title main-title">Вопросы и ответы</h2>
+          <div class="faq__tabs">
+            <ul class="faq__tab-list">
+              <li class="faq__tab-item faq__tab-item--current" rel="tab4">
+                <button class="faq__tab-button faq__tab-button--current" type="button" rel="tab4">Центр</button>
               </li>
-              <li class="news__item swiper-slide" rel="tab-3">
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-3@1x.webp 1x, images/news-img-desktop-3@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-3@1x.webp 1x, images/news-img-tablet-3@2x.webp 2x">
-                        <source width="290" height="330" type="image/webp"
-                          srcset="images/news-img-mobile-3@1x.webp 1x, images/news-img-mobile-3@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-3@1x.jpg 1x, images/news-img-desktop-3@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-3@1x.jpg 1x, images/news-img-tablet-3@2x.jpg 2x">
-                        <img src="images/news-img-mobile-3@1x.jpg" srcset="images/news-img-mobile-3@2x.jpg 2x" width="290"
-                          height="330" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
-                      </picture>
-                    </div>
-                    <div class="news__picture-big">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-3@1x.webp 1x, images/news-img-big-3@2x.webp 2x">
-                        <source width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-3@1x.webp 1x, images/news-img-big-3@2x.webp 2x">
-                        <img src="images/news-img-big-3@1x.jpg" srcset="images/news-img-big-3@2x.jpg 2x" width="604"
-                          height="400" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Новая программа
-                      волонтёрства</h3>
-                    <time class="news__content-date" datetime="2023-03-17">17/03/2023</time>
-                    <p>Программа помощи детям
-                      длительностью 4 месяца</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-4@1x.webp 1x, images/news-img-desktop-4@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-4@1x.webp 1x, images/news-img-tablet-4@2x.webp 2x">
-                        <source width="290" height="240" type="image/webp"
-                          srcset="images/news-img-mobile-4@1x.webp 1x, images/news-img-mobile-4@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-4@1x.jpg 1x, images/news-img-desktop-4@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-4@1x.jpg 1x, images/news-img-tablet-4@2x.jpg 2x">
-                        <img src="images/news-img-mobile-4@1x.jpg" srcset="images/news-img-mobile-4@2x.jpg 2x" width="290"
-                          height="240"
-                          alt="Стол с пятью ноутбуками и несколькими жёсткими дисками. Руки двоих мужчин за ноутбуками. Вид сверху">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Построй свою
-                      карьеру</h3>
-                    <time class="news__content-date" datetime="2023-03-10">10/03/2023</time>
-                    <p>Ведущие компании
-                      готовы трудоустроить
-                      выпускников стажировки</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
+              <li class="faq__tab-item" rel="tab5">
+                <button class="faq__tab-button" type="button" rel="tab5">Абонемент</button>
               </li>
-              <li class="news__item swiper-slide" rel="tab-4">
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-1@1x.webp 1x, images/news-img-desktop-1@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-1@1x.webp 1x, images/news-img-tablet-1@2x.webp 2x">
-                        <source width="290" height="330" type="image/webp"
-                          srcset="images/news-img-mobile-1@1x.webp 1x, images/news-img-mobile-1@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-1@1x.jpg 1x, images/news-img-desktop-1@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-1@1x.jpg 1x, images/news-img-tablet-1@2x.jpg 2x">
-                        <img src="images/news-img-mobile-1@1x.jpg" srcset="images/news-img-mobile-1@2x.jpg 2x" width="290"
-                          height="330" alt="Студентка даёт интервью">
-                      </picture>
-                    </div>
-                    <div class="news__picture-big">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-1@1x.webp 1x, images/news-img-big-1@2x.webp 2x">
-                        <source width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-1@1x.webp 1x, images/news-img-big-1@2x.webp 2x">
-                        <img src="images/news-img-big-1@1x.jpg" srcset="images/news-img-big-1@2x.jpg 2x" width="604"
-                          height="400" alt="Студентка даёт интервью">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Интервью с участницей программы
-                      стажировки</h3>
-                    <time class="news__content-date" datetime="2023-03-23">23/03/2023</time>
-                    <p>Саша рассказывает, как попала в программу и как прошла 6-
-                      месячная стажировка в ISOFound</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-2@1x.webp 1x, images/news-img-desktop-2@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-2@1x.webp 1x, images/news-img-tablet-2@2x.webp 2x">
-                        <source width="290" height="240" type="image/webp"
-                          srcset="images/news-img-mobile-2@1x.webp 1x, images/news-img-mobile-2@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-2@1x.jpg 1x, images/news-img-desktop-2@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-2@1x.jpg 1x, images/news-img-tablet-2@2x.jpg 2x">
-                        <img src="images/news-img-mobile-2@1x.jpg" srcset="images/news-img-mobile-2@2x.jpg 2x" width="290"
-                          height="240" alt="Побережье Тель-Авива. Израиль">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Путешествуем по миру</h3>
-                    <time class="news__content-date" datetime="2023-03-20">20/03/2023</time>
-                    <p>Какие места посещают наши
-                      студенты весной</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
+              <li class="faq__tab-item" rel="tab6">
+                <button class="faq__tab-button" type="button" rel="tab6">Услуги</button>
               </li>
-              <li class="news__item swiper-slide" rel="tab-5">
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-3@1x.webp 1x, images/news-img-desktop-3@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-3@1x.webp 1x, images/news-img-tablet-3@2x.webp 2x">
-                        <source width="290" height="330" type="image/webp"
-                          srcset="images/news-img-mobile-3@1x.webp 1x, images/news-img-mobile-3@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-3@1x.jpg 1x, images/news-img-desktop-3@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-3@1x.jpg 1x, images/news-img-tablet-3@2x.jpg 2x">
-                        <img src="images/news-img-mobile-3@1x.jpg" srcset="images/news-img-mobile-3@2x.jpg 2x" width="290"
-                          height="330" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
-                      </picture>
-                    </div>
-                    <div class="news__picture-big">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-3@1x.webp 1x, images/news-img-big-3@2x.webp 2x">
-                        <source width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-3@1x.webp 1x, images/news-img-big-3@2x.webp 2x">
-                        <img src="images/news-img-big-3@1x.jpg" srcset="images/news-img-big-3@2x.jpg 2x" width="604"
-                          height="400" alt="Руки девушки в красной кофточке со значком Волонтёр крупным планом">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Новая программа
-                      волонтёрства</h3>
-                    <time class="news__content-date" datetime="2023-03-17">17/03/2023</time>
-                    <p>Программа помощи детям
-                      длительностью 4 месяца</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-4@1x.webp 1x, images/news-img-desktop-4@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-4@1x.webp 1x, images/news-img-tablet-4@2x.webp 2x">
-                        <source width="290" height="240" type="image/webp"
-                          srcset="images/news-img-mobile-4@1x.webp 1x, images/news-img-mobile-4@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-4@1x.jpg 1x, images/news-img-desktop-4@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-4@1x.jpg 1x, images/news-img-tablet-4@2x.jpg 2x">
-                        <img src="images/news-img-mobile-4@1x.jpg" srcset="images/news-img-mobile-4@2x.jpg 2x" width="290"
-                          height="240"
-                          alt="Стол с пятью ноутбуками и несколькими жёсткими дисками. Руки двоих мужчин за ноутбуками. Вид сверху">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Построй свою
-                      карьеру</h3>
-                    <time class="news__content-date" datetime="2023-03-10">10/03/2023</time>
-                    <p>Ведущие компании
-                      готовы трудоустроить
-                      выпускников стажировки</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
-              </li>
-              <li class="news__item news__item--active swiper-slide" rel="tab-6">
-                <div class="news__item-wrapper news__item-wrapper--big">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-1@1x.webp 1x, images/news-img-desktop-1@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-1@1x.webp 1x, images/news-img-tablet-1@2x.webp 2x">
-                        <source width="290" height="330" type="image/webp"
-                          srcset="images/news-img-mobile-1@1x.webp 1x, images/news-img-mobile-1@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-1@1x.jpg 1x, images/news-img-desktop-1@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-1@1x.jpg 1x, images/news-img-tablet-1@2x.jpg 2x">
-                        <img src="images/news-img-mobile-1@1x.jpg" srcset="images/news-img-mobile-1@2x.jpg 2x" width="290"
-                          height="330" alt="Студентка даёт интервью">
-                      </picture>
-                    </div>
-                    <div class="news__picture-big">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-1@1x.webp 1x, images/news-img-big-1@2x.webp 2x">
-                        <source width="604" height="400" type="image/webp"
-                          srcset="images/news-img-big-1@1x.webp 1x, images/news-img-big-1@2x.webp 2x">
-                        <img src="images/news-img-big-1@1x.jpg" srcset="images/news-img-big-1@2x.jpg 2x" width="604"
-                          height="400" alt="Студентка даёт интервью">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content news__content--big">
-                    <h3 class="news__content-title">Интервью с участницей программы
-                      стажировки</h3>
-                    <time class="news__content-date" datetime="2023-03-23">23/03/2023</time>
-                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="news__item-wrapper">
-                  <div class="news__pictures-wrapper">
-                    <div class="news__picture">
-                      <picture>
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/webp"
-                          srcset="images/news-img-desktop-2@1x.webp 1x, images/news-img-desktop-2@2x.webp 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/webp"
-                          srcset="images/news-img-tablet-2@1x.webp 1x, images/news-img-tablet-2@2x.webp 2x">
-                        <source width="290" height="240" type="image/webp"
-                          srcset="images/news-img-mobile-2@1x.webp 1x, images/news-img-mobile-2@2x.webp 2x">
-                        <source media="(min-width: 1440px)" width="286" height="400" type="image/jpeg"
-                          srcset="images/news-img-desktop-2@1x.jpg 1x, images/news-img-desktop-2@2x.jpg 2x">
-                        <source media="(min-width: 768px)" width="324" height="350" type="image/jpeg"
-                          srcset="images/news-img-tablet-2@1x.jpg 1x, images/news-img-tablet-2@2x.jpg 2x">
-                        <img src="images/news-img-mobile-2@1x.jpg" srcset="images/news-img-mobile-2@2x.jpg 2x" width="290"
-                          height="240" alt="Побережье Тель-Авива. Израиль">
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="news__content">
-                    <h3 class="news__content-title">Путешествуем по миру</h3>
-                    <time class="news__content-date" datetime="2023-03-20">20/03/2023</time>
-                    <p>Какие места посещают наши
-                      студенты весной</p>
-                    <button class="news__content-button card-button" type="button">
-                      <span class="visually-hidden">Открыть подробности</span>
-                    </button>
-                  </div>
-                </div>
+              <li class="faq__tab-item" rel="tab7">
+                <button class="faq__tab-button" type="button" rel="tab7">Правила</button>
               </li>
             </ul>
-          </div>
-          <div class="news__pagination-wrapper">
-            <button class="news__pagination-arrow news__pagination-arrow--prev" type="button">
-              <span class="visually-hidden">Показать предыдущую новость</span>
-            </button>
-            <ul class="news__pagination-list swiper-pagination">
-            </ul>
-            <button class="news__pagination-arrow news__pagination-arrow--next" type="button">
-              <span class="visually-hidden">Показать следующую новость</span>
-            </button>
+            <div class="faq__info">
+              <ul class="faq__info-list faq__info-list--current" rel="tab4">
+                <li class="faq__info-item faq__info-item--current" rel="tab8">
+                  <h3>Как стать членом фитнес-центра?</h3>
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор.
+                    При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  <button class="faq__button faq__button--current" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab9">
+                  <h3>Где можно посмотреть расписание?</h3>
+                  <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть
+                    возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую
+                    неделю.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab10">
+                  <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
+                  <p>Да, в фитнес-зале есть несколько кулеров. По одному в женской и мужской раздевалках, и три в самой
+                    тренировочной зоне.
+                    Полотенца не предоставляются. Рекомендуем приносить их с собой.
+                  </p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab11">
+                  <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
+                  <p>Вы можете посмотреть количество тренеров и их квалификацию в разделе "Жюри"</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+              </ul>
+              <ul class="faq__info-list" rel="tab5">
+                <li class="faq__info-item" rel="tab12">
+                  <h3>Занятия с тренером входят в абонемент?</h3>
+                  <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда
+                    присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по
+                    тренажеру или технике выполнения упражнения.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab13">
+                  <h3>Можно ли заморозить абонемент?</h3>
+                  <p>Заморозка абонемента доступна сроком не более, чем на 30 календарных дней и только для абонемента
+                    на
+                    12 месяцев</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab14">
+                  <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                  <p>Лимит посещения тренажёрного зала зависит от типа преобретаемого абонемента. Занятия в группах
+                    оплачиваются отдельно. О лимите их посещений Вы можете узнать у тренера по групповым занятиям.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab15">
+                  <h3>Что такое семейный доступ и доступ для друзей?</h3>
+                  <p>Это пробное занятие. По своему абонементу Вы можете единожды провести в зал двух членов семьи и
+                    одного друга.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+              </ul>
+              <ul class="faq__info-list" rel="tab6">
+                <li class="faq__info-item" rel="tab16">
+                  <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
+                  <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши
+                    данные, цели и предложит программу питания.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab17">
+                  <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                  <p>Да, в клубе регулярно проводятся соревнования по различным направлениям. Подробнее узнать о
+                    расписании таких мероприятий Вы можете у своего или дежурного тренера, а так же на стойке ресепшн.
+                  </p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab18">
+                  <h3>Можно ли приобрести в центре спортивное питание?</h3>
+                  <p>Да, в нашем центре есть специализированный магазин по продаже спортивного питания, где Вас
+                    проконсультирует специалист и подберёт необходимую продукцию.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab19">
+                  <h3>Есть ли в центре детская комната?</h3>
+                  <p>Да, в центре предусмотрена детская игровая зона. На время Вашего пребывания в тренажёрном зале,
+                    Ваши
+                    дети могут вдоволь наиграться на различных снарядах, находясь под присмотром профессионального
+                    педагога.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+              </ul>
+              <ul class="faq__info-list" rel="tab7">
+                <li class="faq__info-item" rel="tab20">
+                  <h3>Есть в фитнес-центре дресс-код?</h3>
+                  <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду.
+                    Верхняя
+                    и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты,
+                    кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках
+                    и
+                    т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab21">
+                  <h3>Можно ли приводить с собой детей на тренировки?</h3>
+                  <p>Привести с собой ребёнка в фитнес-зал можно по согласованию с тренером на некоторые занятия. При
+                    этом
+                    ребёнок должен всё время быть вместе с родителями, не отвлекать группу и не требовать к себе
+                    внимания
+                    остальных посетителей занятий.
+                    Несовершеннолетние дети до 13 лет должны находиться на территории фитнес-объекта в сопровождении
+                    родителей или доверенных лиц, не моложе 18 лет. Родители должны быть ознакомлены с правилами
+                    поведения
+                    в фитнес-объекте и нести полную ответственность за соблюдение ребёнком указанных правил. 2
+                    Также существуют ограничения, связанные с безопасностью детей. Они не должны входить в помещение,
+                    где
+                    находятся тренажеры и снаряды для тяжёлой атлетики, так как велик риск получить серьёзную травму.
+                  </p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab22">
+                  <h3>Какие дополнительные правила посещения центра?</h3>
+                  <p>Все правила посещения центра подробно описаны в Договоре.</p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+                <li class="faq__info-item" rel="tab23">
+                  <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                  <p>В бассейн справка нужна для подтверждения того, что посетитель не страдает от заболеваний, которые
+                    передаются контактным путём.
+                    Для посещения фитнес-клуба справка не обязательна по действующим санитарным правилам.
+                  </p>
+                  <button class="faq__button" type="button">
+                    <span class="visually-hidden">Открыть описание</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <section class="main__faq faq" data-test="FAQ">
-        <div class="faq__wrapper">
-          <h2 class="faq__title">Вопросы и ответы</h2>
-          <ul class="faq__list">
-            <li class="faq__item" rel="tab-6">
-              <h3 class="faq__item-title">Кто организатор? Какие сроки у программы?</h3>
-              <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями.
-                Сроки программы обмена могут варьироваться от одного семестра до года.</p>
-              <button class="faq__button" type="button">
-                <span class="visually-hidden">Открыть описание</span>
-              </button>
-            </li>
-            <li class="faq__item" rel="tab-7">
-              <h3 class="faq__item-title">Что такое грант на обучение?</h3>
-              <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена
-                студентами для оплаты учебных расходов.</p>
-              <button class="faq__button" type="button">
-                <span class="visually-hidden">Открыть описание</span>
-              </button>
-            </li>
-            <li class="faq__item faq__item--current" rel="tab-8">
-              <h3 class="faq__item-title">Как определяется стоимость программы?</h3>
-              <p>Полная стоимость определяется организаторами в зависимости от&nbsp;направления. В большинстве случаев
-                грант
-                «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля
-                личного
-                участия.</p>
-              <button class="faq__button faq__button--current" type="button">
-                <span class="visually-hidden">Открыть описание</span>
-              </button>
-            </li>
-            <li class="faq__item" rel="tab-9">
-              <h3 class="faq__item-title">Признаётся ли учёба в&nbsp;рамках проекта для дальнейшего
-                обучения?</h3>
-              <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей
-                профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие
-                университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
-              <button class="faq__button" type="button">
-                <span class="visually-hidden">Открыть описание</span>
-              </button>
-            </li>
-            <li class="faq__item" rel="tab-10">
-              <h3 class="faq__item-title">Как выглядит полный процесс регистрации на программу
-                «Стажировка»?</h3>
-              <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена,
-                общение с координатором программы, заполнение заявления и предоставление необходимых документов,
-                прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и
-                подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
-              <button class="faq__button" type="button">
-                <span class="visually-hidden">Открыть описание</span>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="main__reviews reviews" data-test="reviews" id="reviews">
-        <div class="reviews__wrapper">
-          <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__buttons-wrapper">
+      <section class="main__reviews reviews" data-test="reviews">
+        <div class="reviews__wrapper wrapper">
+          <h2 class="reviews__title second-title">Отзывы</h2>
+          <div class="reviews__slider-wrapper">
             <button class="reviews__button reviews__button--prev" type="button" data-id="reviews-prev">
               <span class="visually-hidden">Показать предыдущий отзыв</span>
             </button>
+            <div class="reviews__swiper swiper" data-id="reviews-swiper">
+              <div class="reviews__review-wrapper swiper-wrapper">
+                <div class="reviews__item review swiper-slide">
+                  <h3>Анна Орлова</h3>
+                  <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют,
+                    персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
+                  <div class="review__picture">
+                    <picture>
+                      <source media="(min-width: 768px)" width="80" height="80" type="image/webp"
+                        srcset="images/reviews-img@1x.webp 1x, images/reviews-img@2x.webp 2x">
+                      <source width="68" height="68" type="image/webp"
+                        srcset="images/reviews-img-mobile@1x.webp 1x, images/reviews-img-mobile@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="80" height="80" type="image/jpeg"
+                        srcset="images/reviews-img@1x.jpg 1x, images/reviews-img@2x.jpg 2x">
+                      <img src="images/reviews-img-mobile@1x.jpg" srcset="images/reviews-img-mobile@2x.jpg 2x" width="68"
+                        height="68" alt="Автор отзыва">
+                    </picture>
+                  </div>
+                </div>
+                <div class="reviews__item review swiper-slide">
+                  <h3>Анна Орлова</h3>
+                  <blockquote>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют,
+                    персонал
+                    дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
+                  <div class="review__picture">
+                    <picture>
+                      <source media="(min-width: 768px)" width="80" height="80" type="image/webp"
+                        srcset="images/reviews-img@1x.webp 1x, images/reviews-img@2x.webp 2x">
+                      <source width="68" height="68" type="image/webp"
+                        srcset="images/reviews-img-mobile@1x.webp 1x, images/reviews-img-mobile@2x.webp 2x">
+                      <source media="(min-width: 768px)" width="80" height="80" type="image/jpeg"
+                        srcset="images/reviews-img@1x.jpg 1x, images/reviews-img@2x.jpg 2x">
+                      <img src="images/reviews-img-mobile@1x.jpg" srcset="images/reviews-img-mobile@2x.jpg 2x" width="68"
+                        height="68" alt="Автор отзыва">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
             <button class="reviews__button reviews__button--next" type="button" data-id="reviews-next">
               <span class="visually-hidden">Показать следущий отзыв</span>
             </button>
           </div>
-          <div class="reviews__swiper swiper" data-id="reviews-swiper">
-            <ul class="reviews__list swiper-wrapper">
-              <li class="reviews__item swiper-slide">
-                <h3 class="reviews__item-title">Я могу с уверенностью сказать, что это был один из самых
-                  незабываемых опытов в жизни!</h3>
-                <div class="reviews__person">
-                  <h4 class="reviews__person-name">Лола Алекс</h4>
-                  <div class="reviews__picture">
-                    <picture>
-                      <source media="(min-width: 768px)" width="90" height="90" type="image/webp"
-                        srcset="images/avatar-1@1x.webp 1x, images/avatar-1@2x.webp 2x">
-                      <source width="60" height="60" type="image/webp"
-                        srcset="images/avatar-mobile-1@1x.webp 1x, images/avatar-mobile-1@2x.webp 2x">
-                      <source media="(min-width: 768px)" width="90" height="90" type="image/jpeg"
-                        srcset="images/avatar-1@1x.jpg 1x, images/avatar-1@2x.jpg 2x">
-                      <img src="images/avatar-mobile-1@1x.jpg" srcset="images/avatar-mobile-1@2x.jpg 2x" width="60"
-                        height="60" alt="Автор отзыва">
-                    </picture>
-                  </div>
-                </div>
-                <div class="reviews__program">
-                  <h4 class="reviews__program-title">Программа</h4>
-                  <p class="reviews__program-description">Masa Art Challenge</p>
-                </div>
-                <div class="reviews__period">
-                  <h4 class="reviews__period-title">Дата</h4>
-                  <p class="reviews__period-description">Осень 2022</p>
-                </div>
-                <blockquote>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые
-                  впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других
-                  программ, и я чувствую огромную благодарность за предоставленную мне возможность.</blockquote>
-              </li>
-              <li class="reviews__item swiper-slide">
-                <h3 class="reviews__item-title">Благодаря опыту стажировки я узнал так много нового о себе
-                  и об окружающем мире.</h3>
-                <div class="reviews__person">
-                  <h4 class="reviews__person-name">Давид Иванов</h4>
-                  <div class="reviews__picture">
-                    <picture>
-                      <source media="(min-width: 768px)" width="90" height="90" type="image/webp"
-                        srcset="images/avatar-2@1x.webp 1x, images/avatar-2@2x.webp 2x">
-                      <source width="60" height="60" type="image/webp"
-                        srcset="images/avatar-mobile-2@1x.webp 1x, images/avatar-mobile-2@2x.webp 2x">
-                      <source media="(min-width: 768px)" width="90" height="90" type="image/jpeg"
-                        srcset="images/avatar-2@1x.jpg 1x, images/avatar-2@2x.jpg 2x">
-                      <img src="images/avatar-mobile-2@1x.png" srcset="images/avatar-mobile-2@2x.jpg 2x" width="60"
-                        height="60" alt="Автор отзыва">
-                    </picture>
-                  </div>
-                </div>
-                <div class="reviews__program">
-                  <h4 class="reviews__program-title">Программа</h4>
-                  <p class="reviews__program-description">Volunteer Chance</p>
-                </div>
-                <div class="reviews__period">
-                  <h4 class="reviews__period-title">Дата</h4>
-                  <p class="reviews__period-description">Лето 2022</p>
-                </div>
-                <blockquote>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень
-                  рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была
-                  на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</blockquote>
-              </li>
-            </ul>
-            <div class="reviews__scrollbar swiper-scrollbar">
-              <span class="visually-hidden">Скроллбар для переключения слайдов с доступными программами</span>
-            </div>
-          </div>
         </div>
       </section>
-      <section class="main__contacts contacts" data-test="contacts" id="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__info contacts__info--address">
-            <h3 class="contacts__info-title">Центральный офис</h3>
-            <address class="contacts__info-description">г. Новосибирск, ул. Щетинкина 68, культурный центр</address>
-          </div>
-          <div class="contacts__info contacts__info--phone">
-            <h3 class="contacts__info-title">Телефон</h3>
-            <a class="contacts__info-description" href="tel:+796387687676">+7 963 876 876 76</a>
-          </div>
-          <div class="contacts__info contacts__info--email">
-            <h3 class="contacts__info-title">Email</h3>
-            <a class="contacts__info-description" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
-          </div>
-          <div class="contacts__picture">
-            <picture>
-              <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
-                srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
-                srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x">
-              <source width="290" height="240" type="image/webp"
-                srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
-                srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" width="678" height="500" type="image/png"
-                srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
-              <img src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="290" height="240"
-                alt="Карта проезда к главному офису компании">
-            </picture>
-          </div>
-        </div>
-      </section>
-      <section class="main__form form-content" data-test="form">
-        <div class="form-content__background-wrapper">
-          <div class="form-content__wrapper">
-            <h2 class="form-content__title" id="write">Напишите нам</h2>
-            <p class="form-content__description">Оставьте ваши контакты, если у вас остались вопросы – мы на них
-              ответим!</p>
-            <form class="form-content__form form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="form__label" for="name">Имя</label>
-              <div class="form__name-input">
-                <input type="text" name="name-input" id="name" pattern="[A-Za-zA-Яа-яЁё\s]+"
+      <section class="main__form-wrapper" data-test="form">
+        <div class="main__form-container">
+          <h2 class="main__form-title second-title">Бесплатное занятие</h2>
+          <form class="main__form form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="form__name">
+              <span class="visually-hidden">Ваше имя</span>
+              <input class="form__name-input" type="text" name="name-input" placeholder="Имя"
+                pattern="[A-Za-zA-Яа-яЁё\s]+" required>
+            </label>
+            <label class="form__tel">
+              <span class="visually-hidden">Ваш телефон</span>
+              <input class="form__tel-input" type="text" name="tel-input" placeholder="Телефон" pattern="^[0-9]+$"
                 required>
-              </div>
-              <label class="form__label" for="tel">Телефон</label>
-              <input class="form__tel-input" type="tel" name="tel-input" id="tel" pattern="^[0-9]+{10}" required>
-              <label class="form__label" for="text">Ваше сообщение</label>
-              <textarea class="form__message-input" name="text-input" id="text" required></textarea>
-              <label class="form__label" for="city">Выберите город</label>
-              <select class="form__select form__select--closed" name="city-choice" id="city" required>
-                <option class="form__option" value="">&nbsp;</option>
-                <option class="form__option" value="moscow">Москва</option>
-                <option class="form__option" value="petersburg">Санкт-Петербург</option>
-                <option class="form__option" value="novosibirsk">Новосибирск</option>
-                <option class="form__option" value="nijniy novgorod">Нижний Новгород</option>
-                <option class="form__option" value="ekaterinburg">Екатеринбург</option>
-                <option class="form__option" value="vladivistok">Владивосток</option>
-                <option class="form__option" value="kaliningrad">Калининград</option>
-              </select>
-              <div class="form__agreement">
-                <label class="form__label-agree">Я согласен на обработку моих персональных<br>
-                  данных
-                <input class="form__input-agree" type="checkbox" name="agree" required>
-              </label>
-              </div>
-              <button class="form__button main-button" type="submit">Отправить</button>
-            </form>
+            </label>
+            <button class="form__button" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="main__contacts contacts wrapper">
+          <h3 class="contacts__title second-title">Контакты</h3>
+          <div class="contacts__wrapper">
+            <div class="contacts__info-wrapper contacts__info-wrapper--address">
+              <h4 class="contacts__subtitle">Адрес:</h4>
+              <address class="contacts__info contacts__info--address">г. Омск, ул. 60 лет Октября, 7</address>
+            </div>
+            <div class="contacts__info-wrapper contacts__info-wrapper--schedule">
+              <h4 class="contacts__subtitle">График работы:</h4>
+              <p class="contacts__info contacts__info--schedule">Пн-Вс: с 8:00 до 22:00</p>
+            </div>
+            <div class="contacts__info-wrapper contacts__info-wrapper--phone">
+              <h4 class="contacts__subtitle">Телефон:</h4>
+              <a class="contacts__info contacts__info--phone" href="tel:+78005555555">8 800 555-55-55</a>
+            </div>
+            <div class="contacts__info-wrapper contacts__info-wrapper--email">
+              <h4 class="contacts__subtitle">Email:</h4>
+              <a class="contacts__info contacts__info--email" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="body__footer footer" data-test="footer">
-      <div class="footer__wrapper">
-        <div class="footer__logo-wrapper">
-          <svg width="30" height="30">
-            <use href="icons/stack.svg#logo"></use>
-          </svg>
-        </div>
-        <ul class="footer__menu-list">
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#about">О проекте</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#programs">Программы</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#grant">Как поехать</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#reviews">Отзывы</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#news">Новости</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-        <a class="footer__policy" href="#">Политика конфиденциальности</a>
-        <p class="footer__copyright">Стажировка © 2023 Все права защищены</p>
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--vk" href="#" target="_blank" rel="noreferrer noopener">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--ok" href="#" target="_blank" rel="noreferrer noopener">
-              <span class="visually-hidden">Одноклассники</span>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--rd" href="#" target="_blank" rel="noreferrer noopener">
-              <span class="visually-hidden">Reddit</span>
-            </a>
-          </li>
-        </ul>
+      <div class="footer__wrapper wrapper">
+        <img src="images/logo.svg" width="100" height="20" alt="Логотип сайта SUPERGYM">
+        <nav class="footer__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Услуги</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Абонементы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Акции</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Тренеры</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Расписание</a>
+            </li>
+          </ul>
+          <ul class="nav__social-list social">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy?ysclid=m8slvzsnue649094729">
+                <span class="visually-hidden">VKontakte</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--ok" href="https://ok.ru/htmlacademy/topic/151497327248648">
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--rd"
+                href="https://www.reddit.com/search/?q=html&cId=68f6f428-8046-4707-aa21-b3910aa12dc1&iId=e66c63a8-0b32-4e8a-80cb-b9fd69c7f6aa">
+                <span class="visually-hidden">Reddit</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </div>
-  <script type="module" src="scripts/main.js"></script>
-  <div class="body__modal-wrapper body__modal-wrapper--closed" tabindex="0">
-    <div class="body__modal modal">
-      <h2 class="modal__title" id="write-modal">Напишите нам</h2>
-      <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы - мы на них ответим!</p>
-      <form class="modal__form form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="form__label" for="name-modal">Имя</label>
-        <div class="form__name-input">
-          <input type="text" name="name-input" id="name-modal" pattern="[A-Za-zA-Яа-яЁё\s]+"
-          required>
-        </div>
-        <label class="form__label" for="tel-modal">Телефон</label>
-        <input class="form__tel-input" type="tel" name="tel-input" id="tel-modal" pattern="^[0-9]+{10}" required>
-        <label class="form__label" for="city-modal">Выберите город</label>
-        <select class="form__select form__select--closed" name="city-choice" id="city-modal" required>
-          <option class="form__option" value="">&nbsp;</option>
-          <option class="form__option" value="moscow">Москва</option>
-          <option class="form__option" value="petersburg">Санкт-Петербург</option>
-          <option class="form__option" value="novosibirsk">Новосибирск</option>
-          <option class="form__option" value="nijniy novgorod">Нижний Новгород</option>
-          <option class="form__option" value="ekaterinburg">Екатеринбург</option>
-          <option class="form__option" value="vladivistok">Владивосток</option>
-          <option class="form__option" value="kaliningrad">Калининград</option>
-        </select>
-        <div class="form__agreement">
-          <label class="form__label-agree" for="agreement-modal">Я согласен на обработку моих персональных
-            данных</label>
-          <input class="form__input-agree" type="checkbox" name="agree" id="agreement-modal" required>
-        </div>
-        <button class="form__button main-button" type="submit">Отправить</button>
-      </form>
-      <button class="modal__button-close button-close" type="button">
-        <span class="visually-hidden">Закрыть форму</span>
-      </button>
-    </div>
-  </div>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

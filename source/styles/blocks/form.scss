@@ -1,0 +1,116 @@
+.form__name-input,
+.form__tel-input,
+.form__button {
+  font-family: inherit;
+  color: var(--color-second, #ffffff);
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.form__name-input,
+.form__tel-input {
+  min-width: 290px;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
+  padding: 0;
+  padding-bottom: 3px;
+  border: none;
+  border-bottom: 1px solid #74819c;
+
+  &:hover:not(:disabled) {
+    border-bottom: 1px solid var(--color-second, #ffffff);
+  }
+
+  &:focus:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    border-color: var(--color-second, #ffffff);
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(116, 129, 156, 0.3);
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    border-bottom: 1px solid #ff121f;
+  }
+}
+
+.form__name-input.invalid,
+.form__tel-input.invalid {
+  border-bottom: 1px solid #ff121f;
+}
+
+.form__button {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 22px;
+  border: 2px solid var(--color-second, #ffffff);
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--bg-base, #000080);
+    color: var(--color-price, #000000);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--color-price, #000000);
+    border: 2px solid #000000;
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--bg-base, #000080);
+    color: var(--color-base, #000000);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+@media (width <= 767px) {
+  .form__name-input {
+    margin-bottom: 1px;
+  }
+}
+
+@media (width >= 768px) {
+  .form__name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .form__tel {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .form__name-input,
+  .form__tel-input {
+    min-width: 205px;
+  }
+
+  .form__button {
+    padding: 25px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+}
+
+@media (width >= 1366px) {
+  .form__name-input,
+  .form__tel-input {
+    min-width: 100%;
+    padding-bottom: 3px;
+  }
+
+  .form__button {
+    min-width: 477px;
+  }
+}
